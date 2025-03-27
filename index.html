@@ -62,7 +62,7 @@
         function loaddata(){
         const tg = window.Telegram.WebApp;
         const pData = document.getElementById("data");
-        const data = JSON.stringify(tg.initDataInsafe);
+        const data = JSON.stringify(tg.initDataUnsafe);
         pData.innerText = data;
         }
     </script>
