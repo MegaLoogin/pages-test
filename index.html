@@ -53,16 +53,18 @@
         <h1>Тестовое приложение</h1>
 <!--         <img src="{{ url_for('static', filename='bot.png') }}" alt="123"> -->
         <p></p>
-        <button class="btn">Кнопка</button>
+        <button class="btn" onclick="loaddata()">Кнопка</button>
         <p id="data"></p>
     </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
+        function loaddata(){
         const tg = window.Telegram.WebApp;
         const pData = document.getElementById("data");
         const data = JSON.stringify(tg.initDataInsafe);
         pData.innerText = data;
+        }
     </script>
 </body>
 </html>
